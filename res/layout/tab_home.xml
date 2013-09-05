@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout"
+    style="@style/body"
+    android:background="@android:color/background_light" >
+    
+    <RelativeLayout style="@style/head_bar" android:id="@+id/head" >
+       <!-- <ImageButton style="@style/head_bar_button_go_back" android:contentDescription="@string/go_back_icon"/> -->
+        
+       <TextView
+           android:text="@string/category_home"
+           android:id="@+id/head_bar_title_tv"
+           style="@style/head_bar_text_center"
+        />
+       <ImageView
+            android:onClick="on_click_item"
+            android:layout_alignParentRight="true"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip"
+            android:background="@drawable/head_click_pressed"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/head_menu_right" 
+       />
+    </RelativeLayout>
+    
+    <include
+        android:layout_below="@+id/head"  
+        android:id="@+id/progressbar"
+        layout="@layout/loading" />
+    
+	<com.ordering.weight.LazyScrollView
+	    android:layout_below="@+id/head"  
+        android:id="@+id/waterfall_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="@null" >  
+  
+        <LinearLayout
+            android:id="@+id/waterfall_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="2dp" >
+        </LinearLayout>
+    </com.ordering.weight.LazyScrollView>
+  
+    <TextView
+        android:layout_below="@+id/waterfall_scroll"  
+        android:id="@+id/loadtext"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:background="#FF6699"  
+        android:gravity="center"  
+        android:padding="10dp"  
+        android:text="Loading..."  
+        android:textColor="@android:color/background_dark" /> 
+</RelativeLayout>

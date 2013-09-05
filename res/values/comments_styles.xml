@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="body">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    
+    <!-- title_bar -->
+    <style name="head_bar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@color/color_hard_bar_bg</item>
+    </style>
+    <style name="head_bar_text">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="padding_10_body" parent="body">
+        <item name="android:padding">10dp</item>
+    </style>
+    
+    <style name="head_bar_text_center" parent="head_bar_text">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:text">@string/placeholder</item>
+        <item name="android:shadowColor">#99000000</item>
+        <item name="android:shadowDx">-1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>
